@@ -1,29 +1,30 @@
 <template>
   <div class="profile-page">
-    <header class="header">
-      <div>
-        <h1>Welcome, Indiphile</h1>
-        <p>Wed, 30 October 2024</p>
-      </div>
-      <button class="profile-button">Profile</button>
-    </header>
+    <Sidebar />
+    <div class="main-content">
+      <header class="profile-header">
+        <div>
+          <h1>Welcome, Indiphile</h1>
+          <p>Wed, 30 October 2024</p>
+        </div>
+        <button class="profile-button">Profile</button>
+      </header>
 
-    <main class="main-content">
       <section class="info-section">
         <div class="user-details">
-          <img src="https://via.placeholder.com/100" alt="User avatar" class="avatar" />
+          <img src="../assets/profile.jpeg" alt="User avatar" class="avatar" />
           <div class="details">
             <h2>Wisani Magwaza</h2>
             <p>
-              <img src="https://via.placeholder.com/20" alt="Email Icon" />
+              <img src="../assets/email.png" alt="Email Icon" />
               magwazawisani@gmail.com
             </p>
             <p>
-              <img src="https://via.placeholder.com/20" alt="Phone Icon" />
+              <img src="../assets/tele.png" alt="Phone Icon" />
               +27 74 827 4968
             </p>
             <p>
-              <img src="https://via.placeholder.com/20" alt="Location Icon" />
+              <img src="../assets/location.png" alt="Location Icon" />
               10 Dorset Street, Foreshore, Cape Town, Western Cape 8001
             </p>
           </div>
@@ -53,57 +54,56 @@
           <button class="update-button">Update</button>
         </div>
       </section>
-
-      <footer class="footer">
-        <div class="contact-us">
-          <h3>Contact us</h3>
-          <p>Call Centre: +27 21 959 6767</p>
-          <p>Email: info@cput.ac.za</p>
-          <p>More contact details</p>
-          <p>Search for someone who works here</p>
-        </div>
-        <div class="social-media">
-          <h3>Connect with us</h3>
-          <div class="social-icons">
-            <img src="https://via.placeholder.com/30" alt="Instagram" />
-            <img src="https://via.placeholder.com/30" alt="Facebook" />
-            <img src="https://via.placeholder.com/30" alt="Twitter" />
-            <img src="https://via.placeholder.com/30" alt="YouTube" />
-          </div>
-          <button class="subscribe-button">Subscribe</button>
-        </div>
-      </footer>
-    </main>
+    </div>
   </div>
 </template>
 
 <script>
+import Sidebar from "@/components/SideBar.vue";
+
 export default {
   name: "ProfilePage",
+  components: {
+    Sidebar,
+  },
 };
 </script>
 
 <style scoped>
 /* General Layout */
 .profile-page {
-  font-family: Arial, sans-serif;
+  display: flex;
   background-color: #e9f7f7;
+  font-family: Arial, sans-serif;
   color: #333;
-  padding: 20px;
+  height: 100vh;
+  overflow: auto;
 }
 
-.header {
+.main-content {
+  flex: 1;
+  padding: 20px;
+  margin-left: 250px; /* Adjust according to SidePane width */
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+}
+
+/* Header */
+.profile-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 20px;
 }
 
-.header h1 {
+.profile-header h1 {
   font-size: 24px;
   margin: 0;
 }
 
-.header p {
+.profile-header p {
   color: #777;
 }
 
@@ -111,14 +111,7 @@ export default {
   background-color: transparent;
   border: none;
   cursor: pointer;
-}
-
-.main-content {
-  background: #ffffff;
-  padding: 20px;
-  border-radius: 8px;
-  margin-top: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-weight: bold;
 }
 
 /* User Information Section */
@@ -174,41 +167,12 @@ export default {
 }
 
 .edit-button {
-  background-color: #007bff;
+  background-color: #648ba8;
   color: #fff;
 }
 
 .update-button {
-  background-color: #28a745;
+  background-color: #648ba8;
   color: #fff;
-}
-
-/* Footer */
-.footer {
-  margin-top: 20px;
-  display: flex;
-  justify-content: space-between;
-  padding: 20px;
-  background-color: #f5f5f5;
-  border-radius: 8px;
-}
-
-.contact-us h3,
-.social-media h3 {
-  margin: 0 0 10px;
-}
-
-.social-icons img {
-  margin-right: 10px;
-}
-
-.subscribe-button {
-  margin-top: 10px;
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
 }
 </style>
