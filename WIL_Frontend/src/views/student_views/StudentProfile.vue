@@ -1,5 +1,6 @@
 <template>
   <div class="profile-page">
+    <SideBar />
     <!-- Header Section -->
     <header class="header">
       <div class="header-content">
@@ -14,7 +15,7 @@
     <main class="main">
       <div class="profile-info">
         <div class="user-avatar">
-          <img src="https://via.placeholder.com/100" alt="Avatar" />
+          <img src="../assets/profile.jpeg" alt="profile" class="profile-image"  />
         </div>
         <div class="user-details">
           <div class="field">
@@ -60,6 +61,8 @@
 </template>
 
 <script>
+import SideBar from "@/components/SideBar.vue";
+
 export default {
   data() {
     return {
