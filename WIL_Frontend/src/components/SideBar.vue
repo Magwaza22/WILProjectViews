@@ -1,8 +1,7 @@
 <template>
   <aside class="sidebar">
     <router-link to="/" class="sidebar-link">Home</router-link>
-    <router-link to="/about" class="sidebar-link">About Us</router-link>
-    <router-link to="/contact" class="sidebar-link">Contact Us</router-link>
+    <router-link to="/management" class="sidebar-link">Management</router-link>
     <router-link to="/register" class="sidebar-link">Register</router-link>
     <router-link to="/login" class="sidebar-link">Login</router-link>
   </aside>

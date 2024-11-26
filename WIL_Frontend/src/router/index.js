@@ -4,6 +4,7 @@ import About from "../views/student_views/AboutPage.vue";
 import Register from "../views/student_views/RegistrationPage.vue";
 import Login from "../views/student_views/LoginPage.vue";
 import Profile from "../views/student_views/StudentProfile.vue";
+import Management from "../views/coordinator_views/ManagementPage.vue";
 
 const routes = [
     { path: "/", component: Home },
@@ -11,6 +12,7 @@ const routes = [
     { path: "/register", component: Register },
     { path: "/login", component: Login },
     { path: "/profile", component: Profile },
+    { path: "/management", component: Management },
 ];
 
 const router = createRouter({
