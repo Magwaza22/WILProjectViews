@@ -2,6 +2,7 @@
   <aside class="sidebar">
     <router-link to="/" class="sidebar-link">Home</router-link>
     <router-link to="/management" class="sidebar-link">Management</router-link>
+    <router-link to="/tracking" class="sidebar-link">Track Now</router-link>
     <router-link to="/register" class="sidebar-link">Register</router-link>
     <router-link to="/login" class="sidebar-link">Login</router-link>
   </aside>

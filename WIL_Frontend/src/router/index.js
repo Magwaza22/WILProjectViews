@@ -5,6 +5,7 @@ import Register from "../views/student_views/RegistrationPage.vue";
 import Login from "../views/student_views/LoginPage.vue";
 import Profile from "../views/student_views/StudentProfile.vue";
 import Management from "../views/coordinator_views/ManagementPage.vue";
+import TrackingPage from "@/views/student_views/TrackingPage.vue";
 
 const routes = [
     { path: "/", component: Home },
@@ -13,6 +14,7 @@ const routes = [
     { path: "/login", component: Login },
     { path: "/profile", component: Profile },
     { path: "/management", component: Management },
+    { path: "/tracking", component: TrackingPage },
 ];
 
 const router = createRouter({

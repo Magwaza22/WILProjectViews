@@ -41,7 +41,7 @@ export default {
   },
   methods: {
     trackNow() {
-      this.$router.push("/track");
+      this.$router.push("@/views/student_views/TrackingPage.vue");
     },
     updateDetails() {
       this.$router.push("/update");
