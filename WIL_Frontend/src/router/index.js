@@ -6,6 +6,7 @@ import Login from "../views/student_views/LoginPage.vue";
 import Profile from "../views/student_views/StudentProfile.vue";
 import Management from "../views/coordinator_views/ManagementPage.vue";
 import TrackingPage from "@/views/student_views/TrackingPage.vue";
+import GenericPage from "@/views/student_views/GenericPage.vue";
 
 const routes = [
     { path: "/", component: Home },
@@ -15,6 +16,7 @@ const routes = [
     { path: "/profile", component: Profile },
     { path: "/management", component: Management },
     { path: "/tracking", component: TrackingPage },
+    { path: "/generic", component: GenericPage },
 ];
 
 const router = createRouter({

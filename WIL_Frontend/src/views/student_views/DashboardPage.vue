@@ -21,6 +21,12 @@
                 <p>Update your personal and academic details to keep your profile accurate and ensure seamless placement communication.</p>
                 <button @click="updateDetails">Update Now</button>
               </div>
+
+             <div class="card">
+               <h2>Generic Form</h2>
+               <p>Add your personal and academic details to keep your profile accurate and ensure seamless placement communication.</p>
+               <button @click="addDetails">Add Now</button>
+             </div>
             </div>
 
       </div>
@@ -44,7 +50,10 @@ export default {
       this.$router.push("@/views/student_views/TrackingPage.vue");
     },
     updateDetails() {
-      this.$router.push("/update");
+      this.$router.push("../views/student_views/StudentProfile.vue");
+    },
+    addDetails() {
+      this.$router.push("../views/student_views/GenericPage.vue");
     },
   },
 };
